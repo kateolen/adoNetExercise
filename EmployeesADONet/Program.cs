@@ -10,6 +10,16 @@ namespace EmployeesADONet
     {
         static void Main(string[] args)
         {
+            DbHandler db = new DbHandler();
+            List<Employee> empoyees = db.GetEmployees();
+            db.GetEmployees();
+
+            foreach (var item in empoyees)
+            {
+                Console.WriteLine($"{item.Name}  {item.DepartmentName} {item.Location}");
+                
+            }
+            Console.ReadLine();
         }
     }
 }
